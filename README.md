@@ -44,3 +44,25 @@
 - Apply OSI layer mapping directly to observed packets
 - Practice protocol-based filtering (DNS, TLS, HTTP/HTTPS)
 - Begin introductory exposure to log analysis concepts (Splunk)
+## Week 3 – HTTP vs HTTPS Traffic Analysis
+
+### Objective
+Compare unencrypted HTTP traffic with encrypted HTTPS traffic using Wireshark to understand visibility, encryption, and protocol behavior.
+
+### Tools Used
+- Wireshark
+
+### What I Did
+- Captured live network traffic on an active interface
+- Visited an HTTP website (`http://neverssl.com`)
+- Visited an HTTPS website (`https://www.google.com`)
+- Applied protocol filters (`http`, `tls`, `dns`) to analyze traffic differences
+
+### Key Observations
+- HTTP traffic is visible in plain text, including request details and headers
+- HTTPS traffic is encrypted; only TLS handshakes and metadata are visible
+- DNS resolution occurs before both HTTP and HTTPS connections
+- TLS encrypts application-layer data before it is handed to TCP for transport
+
+### Evidence
+![HTTP vs HTTPS Wireshark Capture](http_vs_https_wireshark.png)
