@@ -65,4 +65,4 @@ Compare unencrypted HTTP traffic with encrypted HTTPS traffic using Wireshark to
 - TLS encrypts application-layer data before it is handed to TCP for transport
 
 ### Evidence
-![HTTP vs HTTPS Wireshark Capture](http_vs_https_wireshark.png)
+![Wireshark Capture – HTTP vs HTTPS](IMG-20260202-WA0033.jpg)
