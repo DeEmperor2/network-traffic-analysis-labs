@@ -66,3 +66,20 @@ Compare unencrypted HTTP traffic with encrypted HTTPS traffic using Wireshark to
 
 ### Evidence
 ![Wireshark Capture – HTTP vs HTTPS](IMG-20260202-WA0033.jpg)
+Splunk Fundamentals – Theory & Query Design (Week Update)
+This week focused on building a solid theoretical foundation in Splunk and SOC log analysis, with emphasis on understanding how analysts explore, filter, and interpret log data during investigations.
+I studied the core structure of Splunk, including:
+How data is stored using indexes
+How logs are associated with hosts and sources
+How the Search Processing Language (SPL) is used to transform raw logs into actionable insights
+Key SPL Concepts Practiced
+Data Enumeration
+Explored all available logs to understand what data sources are present before analysis.
+Log Volume Analysis
+Identified high-volume log sources to detect abnormal behavior or misconfigured systems.
+Authentication Failure Detection
+Designed queries to surface failed login attempts, useful for identifying brute-force attacks or unauthorized access attempts.
+Time-Based Analysis
+Used time-series logic to detect traffic spikes and unusual activity patterns over time.
+Although I was unable to complete hands-on labs due to environment and installation constraints, I focused on understanding SOC workflows, detection logic, and how Splunk integrates with tools like Wireshark for deeper packet-level analysis.
+This phase strengthened my ability to reason like a SOC analyst — knowing what to look for, why it matters, and how to escalate investigations once anomalies are identified.
