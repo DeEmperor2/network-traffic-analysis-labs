@@ -67,6 +67,9 @@ Compare unencrypted HTTP traffic with encrypted HTTPS traffic using Wireshark to
 
 ### Evidence
 ![Wireshark Capture – HTTP vs HTTPS](IMG-20260202-WA0033.jpg)
+
+
+### week 4 Splunk intro
 Splunk Fundamentals – Theory & Query Design (Week Update)
 This week focused on building a solid theoretical foundation in Splunk and SOC log analysis, with emphasis on understanding how analysts explore, filter, and interpret log data during investigations.
 I studied the core structure of Splunk, including:
@@ -85,47 +88,47 @@ Used time-series logic to detect traffic spikes and unusual activity patterns ov
 Although I was unable to complete hands-on labs due to environment and installation constraints, I focused on understanding SOC workflows, detection logic, and how Splunk integrates with tools like Wireshark for deeper packet-level analysis.
 This phase strengthened my ability to reason like a SOC analyst — knowing what to look for, why it matters, and how to escalate investigations once anomalies are identified.
 
-### Week 4 splunk/lab-01-splunk-installation-and-troubleshooting.md
-Lab 01 – Splunk Enterprise Installation & Troubleshooting
-Objective
-To deploy Splunk Enterprise locally on a Windows system in preparation for Security Operations Center (SOC) log analysis and detection engineering practice.
-Environment
-Operating System: Windows
-Tool: Splunk Enterprise 10.2.0 (Windows x64 MSI)
-Installation Directory: C:\Program Files\Splunk\
-Installation Procedure
-Downloaded the official Splunk Enterprise Windows x64 MSI installer (~1GB).
-Launched the setup wizard and selected custom installation options.
-Configured administrative credentials.
-Initiated installation with default directory path.
-Allowed system service configuration and file deployment to begin.
-Issues Encountered
-During installation, the following technical issues were observed:
-Installer stalled at “Preparing to install” stage.
-High CPU utilization during file deployment.
-Windows Explorer became unstable after terminating a process during troubleshooting.
-Taskbar temporarily became unresponsive due to Explorer termination.
-Installation did not progress despite sustained disk activity.
-Manual execution via msiexec did not immediately resolve the issue.
-Troubleshooting Actions Performed
-Monitored CPU and disk utilization via Task Manager to confirm background activity.
-Restarted Windows Explorer using explorer.exe.
-Checked for active msiexec.exe processes.
-Restarted the Windows Installer service.
-Attempted elevated installation through Command Prompt.
-Temporarily disabled Windows Defender real-time protection to reduce interference.
-Verified installation directory for partial deployment artifacts.
-Technical Observations
-Large enterprise MSI installations may appear unresponsive while configuring services.
-Terminating core system processes (e.g., Windows Explorer) can disrupt installer workflows.
-Windows Defender real-time scanning can impact large file deployments.
-MSI-based installations are dependent on Windows Installer service stability.
-Lessons Learned
-Avoid interrupting enterprise installers during service configuration stages.
-Validate system resource utilization before assuming installation failure.
-Use elevated command-line installation when GUI installation stalls.
-Maintain process discipline when troubleshooting production-style software deployments.
-Next Steps
-Perform a clean installation after ensuring system stability.
-Confirm successful deployment by accessing http://localhost:8000.
-Proceed with data ingestion and initial SPL-based detection exercises.
+## Week 5 – Splunk Installation Attempt
+
+### Objective
+Install Splunk Enterprise locally to begin hands-on log analysis and lab configuration.
+
+### Environment
+- Operating System: Windows
+- Installer: Splunk Enterprise (Windows x64 MSI)
+- Source: Official Splunk website
+
+### Process
+1. Downloaded the Splunk Enterprise MSI installer.
+2. Launched the installer.
+3. Monitored system performance using Task Manager during setup.
+
+### Issue Encountered
+The installation stalled at the "Preparing to install" phase and did not progress.
+
+### Observations
+- CPU usage reached 100% during installation.
+- Memory usage exceeded 80%.
+- Disk activity was active but installation did not advance.
+- Windows Security indicated detected threats during the process.
+
+### Troubleshooting Steps
+- Reviewed system resource utilization in Task Manager.
+- Restarted the system to clear potential installer lock.
+- Considered running installation via elevated Command Prompt (msiexec).
+- Planned temporary disabling of real-time protection during installation.
+
+### Outcome
+Installation did not complete successfully. The likely causes include high system resource utilization and possible security interference.
+
+### Next Steps
+- Perform clean installation using administrative privileges.
+- Temporarily disable Windows Defender during installation.
+- Reattempt setup and monitor system performance.
+- Explore alternative deployment options if necessary.
+
+### Evidence
+
+![Installation Stall](images/splunk_install_stall.png)
+
+![Task Manager CPU Usage](images/task_manager_cpu.png)
