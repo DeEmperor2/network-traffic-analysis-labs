@@ -44,6 +44,7 @@
 - Apply OSI layer mapping directly to observed packets
 - Practice protocol-based filtering (DNS, TLS, HTTP/HTTPS)
 - Begin introductory exposure to log analysis concepts (Splunk)
+
 ## Week 3 – HTTP vs HTTPS Traffic Analysis
 
 ### Objective
@@ -83,3 +84,48 @@ Time-Based Analysis
 Used time-series logic to detect traffic spikes and unusual activity patterns over time.
 Although I was unable to complete hands-on labs due to environment and installation constraints, I focused on understanding SOC workflows, detection logic, and how Splunk integrates with tools like Wireshark for deeper packet-level analysis.
 This phase strengthened my ability to reason like a SOC analyst — knowing what to look for, why it matters, and how to escalate investigations once anomalies are identified.
+
+### Week 4 splunk/lab-01-splunk-installation-and-troubleshooting.md
+Lab 01 – Splunk Enterprise Installation & Troubleshooting
+Objective
+To deploy Splunk Enterprise locally on a Windows system in preparation for Security Operations Center (SOC) log analysis and detection engineering practice.
+Environment
+Operating System: Windows
+Tool: Splunk Enterprise 10.2.0 (Windows x64 MSI)
+Installation Directory: C:\Program Files\Splunk\
+Installation Procedure
+Downloaded the official Splunk Enterprise Windows x64 MSI installer (~1GB).
+Launched the setup wizard and selected custom installation options.
+Configured administrative credentials.
+Initiated installation with default directory path.
+Allowed system service configuration and file deployment to begin.
+Issues Encountered
+During installation, the following technical issues were observed:
+Installer stalled at “Preparing to install” stage.
+High CPU utilization during file deployment.
+Windows Explorer became unstable after terminating a process during troubleshooting.
+Taskbar temporarily became unresponsive due to Explorer termination.
+Installation did not progress despite sustained disk activity.
+Manual execution via msiexec did not immediately resolve the issue.
+Troubleshooting Actions Performed
+Monitored CPU and disk utilization via Task Manager to confirm background activity.
+Restarted Windows Explorer using explorer.exe.
+Checked for active msiexec.exe processes.
+Restarted the Windows Installer service.
+Attempted elevated installation through Command Prompt.
+Temporarily disabled Windows Defender real-time protection to reduce interference.
+Verified installation directory for partial deployment artifacts.
+Technical Observations
+Large enterprise MSI installations may appear unresponsive while configuring services.
+Terminating core system processes (e.g., Windows Explorer) can disrupt installer workflows.
+Windows Defender real-time scanning can impact large file deployments.
+MSI-based installations are dependent on Windows Installer service stability.
+Lessons Learned
+Avoid interrupting enterprise installers during service configuration stages.
+Validate system resource utilization before assuming installation failure.
+Use elevated command-line installation when GUI installation stalls.
+Maintain process discipline when troubleshooting production-style software deployments.
+Next Steps
+Perform a clean installation after ensuring system stability.
+Confirm successful deployment by accessing http://localhost:8000.
+Proceed with data ingestion and initial SPL-based detection exercises.
