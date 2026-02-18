@@ -129,6 +129,6 @@ Installation did not complete successfully. The likely causes include high syste
 
 ### Evidence
 
-![Installation Stall](images/splunk_install_stall.png)
+![Installation Stall](images/splunk_install_stall.png)https://github.com/DeEmperor2/network-traffic-analysis-labs/blob/main/IMG_20260218_203228_029.jpg
 
-![Task Manager CPU Usage](images/task_manager_cpu.png)
+![Task Manager CPU Usage](images/task_manager_cpu.png)https://github.com/DeEmperor2/network-traffic-analysis-labs/blob/main/IMG-20260202-WA0033.jpg
