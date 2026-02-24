@@ -132,3 +132,40 @@ Installation did not complete successfully. The likely causes include high syste
 ![Installation Stall](images/splunk_install_stall.png)https://github.com/DeEmperor2/network-traffic-analysis-labs/blob/main/IMG_20260218_203228_029.jpg
 
 ![Task Manager CPU Usage](images/task_manager_cpu.png)https://github.com/DeEmperor2/network-traffic-analysis-labs/blob/main/IMG-20260202-WA0033.jpg
+
+
+
+### Week 6 — Splunk Enterprise Deployment & Internal Log Analysis
+
+**Objective:**
+Continue building SOC skills by mastering Splunk Enterprise on Windows and performing internal log analysis.
+
+### Tasks Completed:
+
+1. Installed Splunk Enterprise v10.2 on Windows x64.
+2. Verified Splunkd service is running.
+3. Accessed the web interface at http://127.0.0.1:8000.
+4. Executed SPL queries:
+   - index=_internal | head 20
+   - index=_internal | stats count by sourcetype
+   - index=_internal log_level=ERROR
+5. Observed 5k+ internal events, including ERROR logs.
+6. Captured timeline visualizations and statistics tables.
+7. Screenshots taken:
+   - Home dashboard ~ 
+   - _internal logs timeline
+   - SPL stats by sourcetype
+   - Splunkd service running
+   - Error log query results
+
+### Reflection:
+
+- Windows MSI install can freeze; manual start via 'splunk start' may be required.
+- _internal logs provide immediate data for analysis and portfolio proof.
+- Learned to navigate Splunk’s Web UI and execute SPL for SOC-style monitoring.
+
+### Next Week Plan:
+
+- Enable and ingest Windows Event Logs locally.
+- Explore Security EventCode queries (e.g., 4625 failed logons).
+- Capture analytical dashboards for portfolio enhancement.
