@@ -169,3 +169,46 @@ Continue building SOC skills by mastering Splunk Enterprise on Windows and perfo
 - Enable and ingest Windows Event Logs locally.
 - Explore Security EventCode queries (e.g., 4625 failed logons).
 - Capture analytical dashboards for portfolio enhancement.
+
+### Week 7 — Internal Log Threat Hunting in Splunk
+
+Objective:
+Analyze internal logs to identify error patterns and noisy components, practicing SOC-style monitoring.
+
+### Tasks Completed:
+
+1. Opened Search & Reporting in Splunk Web.
+2. Set Time Range: Last 24 hours.
+3. Ran SPL query to view log level distribution:
+   index=_internal | stats count by log_level | sort - count
+
+   Result: INFO logs dominated (97,706 events).
+
+4. Identified the most error-prone components:
+   index=_internal log_level=ERROR | stats count by component | sort - count
+
+   Result: [Top component name here] had the highest errors.
+
+5. Visualized error trends over time:
+   index=_internal log_level=ERROR | timechart count
+
+   Result: Line chart showing error spikes and patterns over time.
+
+### Screenshots Included:
+
+1. Query and results for log level distribution.
+2. Query and results showing error counts by component.
+3. Timechart visualization of errors over time.
+
+### Reflection:
+
+- INFO logs dominate internal logs, which is expected in normal operations.
+- ERROR logs help identify components that may require attention or troubleshooting.
+- Using SPL queries and visualizations provides a practical introduction to SOC-style monitoring and log analysis.
+
+### Next Week Plan:
+
+- Install Splunk Add-on for Microsoft Windows.
+- Enable ingestion of Windows Event Logs (Application, System, Security).
+- Run security-related EventCode queries such as 4625 (failed logons) and 4624 (successful logons).
+- Capture dashboards and visualizations for further portfolio documentation.
