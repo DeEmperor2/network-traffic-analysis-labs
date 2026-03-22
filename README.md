@@ -212,3 +212,32 @@ Analyze internal logs to identify error patterns and noisy components, practicin
 - Enable ingestion of Windows Event Logs (Application, System, Security).
 - Run security-related EventCode queries such as 4625 (failed logons) and 4624 (successful logons).
 - Capture dashboards and visualizations for further portfolio documentation.
+
+
+### Week 8 – Lab Environment Setup & Virtualization Troubleshooting
+
+This week focused on rebuilding and stabilizing my cybersecurity lab environment after system changes. The primary goal was to properly set up the tools required for both offensive (attacker) and defensive (SOC) workflows.
+
+I successfully downloaded and installed core tools including Splunk Enterprise, Wireshark, and Oracle VM VirtualBox. A major part of the week involved troubleshooting issues related to importing and running a Kali Linux virtual machine.
+
+During setup, I encountered multiple boot errors caused by incorrect VM configuration and confusion between different virtual machine file formats (.ova, .vdi, .vbox). Through repeated attempts and debugging, I learned how to properly extract virtual machine files, identify the correct configuration file (.vbox), and manually add the VM into VirtualBox.
+
+Key concepts understood this week include:
+- Differences between virtual machine formats (.ova vs .vdi vs .vbox)
+- Proper method of importing vs manually attaching virtual disks
+- Boot order configuration and its impact on VM startup
+- Resource allocation (RAM, CPU) for stable virtual machine performance
+- Common causes of “no operating system found” errors in virtualization
+
+Although I did not fully complete the Kali Linux boot process, I now understand the correct workflow for setting up and troubleshooting virtual environments.
+
+This week emphasized problem-solving and environment setup, reinforcing the importance of persistence and technical understanding when working with complex systems.
+
+### Next Week Plan
+- Successfully boot Kali Linux virtual machine
+- Configure network communication between virtual machines and host system
+- Begin initial lab testing (basic reconnaissance and system interaction)
+- Start ingesting logs into Splunk for analysis
+
+### Key Takeaway
+Setting up a cybersecurity lab requires more than installing tools — it involves understanding system architecture, diagnosing failures, and building a reliable environment for both attack and defense scenarios.
