@@ -241,3 +241,27 @@ This week emphasized problem-solving and environment setup, reinforcing the impo
 
 ### Key Takeaway
 Setting up a cybersecurity lab requires more than installing tools — it involves understanding system architecture, diagnosing failures, and building a reliable environment for both attack and defense scenarios.
+
+### Week 9 – Kali Linux Virtual Machine Successfully Deployed
+
+This week marked a major milestone in my cybersecurity lab development: I successfully booted and launched Kali Linux inside VirtualBox after previous weeks of virtualization issues and failed boot attempts.
+
+The process involved troubleshooting multiple configuration problems, understanding the differences between VM file types (.vbox, .vdi, .ova), and learning how to properly register and launch prebuilt virtual machines.
+
+Key progress made this week:
+- Successfully deployed Kali Linux in VirtualBox
+- Resolved previous boot and configuration errors
+- Improved understanding of virtualization workflows
+- Established a functional attacker environment for future lab exercises
+
+This milestone transitions my lab from setup phase into operational phase. With Kali now working, I can begin practical offensive security tasks such as reconnaissance, scanning, enumeration, and controlled attack simulations.
+
+### Next Week Plan
+- Configure networking between Kali and target systems
+- Test connectivity (ping / IP discovery)
+- Begin basic reconnaissance using Nmap
+- Capture traffic with Wireshark during scans
+- Start generating logs for Splunk analysis
+
+### Key Takeaway
+Persistence during technical failure is a core cybersecurity skill. Solving environment and deployment problems is part of real-world security work, not separate from it.
