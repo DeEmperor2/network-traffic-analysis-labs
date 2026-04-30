@@ -1,4 +1,4 @@
-# Network Traffic Analysis Labs
+<img width="961" height="829" alt="04-nmap-scan png" src="https://github.com/user-attachments/assets/6af7af7f-6e37-4449-a6ec-375aad85da0d" /><img width="1916" height="1037" alt="01-Kali-running png" src="https://github.com/user-attachments/assets/2e581d0b-c42c-48af-b292-d870d75f3e84" /># Network Traffic Analysis Labs
 
 ## Focus
 - Understand live network traffic
@@ -265,3 +265,40 @@ This milestone transitions my lab from setup phase into operational phase. With 
 
 ### Key Takeaway
 Persistence during technical failure is a core cybersecurity skill. Solving environment and deployment problems is part of real-world security work, not separate from it.
+### Week 10 – SOC Lab Deployment, Network Reconnaissance & Log Analysis
+
+This week marked a major transition from environment setup into practical cybersecurity operations. I successfully built and utilized a functional home SOC lab integrating both offensive and defensive tools.
+
+On the offensive side, I used Kali Linux to perform internal reconnaissance using Nmap. The scan confirmed host availability within the lab network and provided insight into basic network behavior.
+
+To analyze network-level activity, I used Wireshark to capture live traffic during scanning. Using filters such as ARP, I was able to observe device communication and understand how systems discover and interact with each other on the network.
+
+On the defensive side, I configured Splunk to ingest Windows Event Logs from the host machine. I verified log ingestion by querying Application and Security logs, gaining visibility into system activity and event generation.
+
+To further test detection capability, I generated user and system activity (application launches and interactions) and analyzed corresponding logs in Splunk. This introduced the concept of correlating actions with logged events.
+
+Key achievements this week:
+- Successfully deployed and operated a Kali Linux attacker environment
+- Performed network reconnaissance using Nmap
+- Captured and analyzed network traffic using Wireshark
+- Configured Splunk SIEM to ingest Windows Event Logs
+- Queried and investigated system activity through log analysis
+
+### Next Week Plan
+- Improve log visibility (enable and troubleshoot missing System logs)
+- Generate and detect specific security events (e.g., failed logins)
+- Begin structured threat detection use cases in Splunk
+- Enhance documentation and publish first cybersecurity project on GitHub
+
+###Screenshots 
+- Kali environment <img width="1916" height="1037" alt="01-Kali-running png" src="https://github.com/user-attachments/assets/aac68e73-f59e-433b-9ab6-44875d7e3512" />
+
+- Nmap reconnaissance <img width="961" height="829" alt="04-nmap-scan png" src="https://github.com/user-attachments/assets/166cc0e0-de1e-413d-a8bb-4233ae583416" />
+
+- Wireshark network traffic <img width="1919" height="1027" alt="03-Wireshark-capture png" src="https://github.com/user-attachments/assets/466275d2-d1e8-4ae0-b39e-a6c47d3f8b1d" />
+
+- Working Splunk <img width="1896" height="879" alt="02-Splunk-dashboard png" src="https://github.com/user-attachments/assets/2568c3b4-8b76-4ccf-bb85-35ead2fc2e2a" />
+
+
+### Key Takeaway
+Cybersecurity is not just about running tools, but about understanding and connecting attacker activity, network behavior, and system logs. This week established the foundation for real-world detection and analysis workflows.
